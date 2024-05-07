@@ -6,7 +6,7 @@ const teamMembers = [
         name:'Lionel Messi',
         age:36,
         activePlayer:true,
-        position: 'forward',
+        position: 'mid',
         strengths: 'ball control',
         weaknesses: 'heading ability',
         skills: ['dribbling','shooting','passing'],
@@ -16,7 +16,7 @@ const teamMembers = [
         name:'Lionel Messi',
         age:36,
         activePlayer:true,
-        position: 'forward',
+        position: 'defender',
         strengths: 'ball control',
         weaknesses: 'heading ability',
         skills: ['dribbling','shooting','passing'],
@@ -38,19 +38,40 @@ function generateTeamCards(){
 teamMembers.forEach(member => {
     const card = document.createElement('div')
 card.classList.add('col-md-4')
+//style card based on position
+let backgroundColor 
+
+switch(member.position.toLowerCase()){
+    case 'forward':
+        backgroundColor="red"
+        break
+        case 'mid':
+        backgroundColor="green"
+        break
+            case 'defender':
+                backgroundColor="orange"
+                break
+}
+
+card.style.backgroundColor = backgroundColor
+
 
 card.innerHTML=`
 <div class="card">
 <div class="card-header">
 ${member.name}
     </div>
-    <div class="card-body">
+    <div id="cardBody" class="card-body" style="background-color:${backgroundColor}">
     <p><strong>Position</strong> ${member.position}</p>
  </div>
 `
+
+
 teamCardsContainer.appendChild(card)
 
+
 });
+
 }
 
 window.onload = generateTeamCards()

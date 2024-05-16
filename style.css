@@ -1,0 +1,10 @@
+img.image-fluid{
+    width:200px;
+    height:200px;
+    text-align: center;
+    margin:auto;
+}
+
+.whole{
+    background-color: rgb(193, 215, 255);
+}

@@ -173,6 +173,20 @@ function generateTeamCards() {
                         break
         }
 
+        let weaknessesColorColor
+
+        switch (member.weaknesses) {
+            case 'fighting':
+                weaknessesColorColor = "blue"
+                break,
+
+                //not working help 
+           
+        }
+
+
+
+
         let ageColor
 
         switch (member.strengths.toLowerCase()) {

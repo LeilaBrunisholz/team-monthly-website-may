@@ -8,3 +8,9 @@ img.image-fluid{
 .whole{
     background-color: rgb(193, 215, 255);
 }
+
+.title{
+    text-align: center;
+    font-family: "Poetsen One", sans-serif;
+color:darkblue;
+}

@@ -20,7 +20,7 @@ const teamMembers = [
         activePlayer: true,
         position: 'spy',
         strengths: 'smart',
-        weaknesses: 'getting caught spying',
+        weaknesses: 'little patience',
         skills: ['gossiping', 'spying'],
         biography: 'Nosey is a really nosey smurf',
         imageURL:"nosey smurf.webp"
@@ -63,7 +63,7 @@ const teamMembers = [
         activePlayer: true,
         position: 'distracter',
         strengths: 'communicating',
-        weaknesses: 'strength',
+        weaknesses: 'fighting',
         skills: ['writing', 'distracting'],
         biography: 'Messi is a really cool dude',
         imageURL:"poet.webp"
@@ -96,7 +96,7 @@ const teamMembers = [
         activePlayer: true,
         position: 'back up',
         strengths: 'cheering',
-        weaknesses: 'clumsiness',
+        weaknesses: 'thinking',
         skills: ['funny', 'smart'],
         biography: 'Clumsy is a really clumbsy smurf',
         imageURL:"Clumbsy.webp"
@@ -107,7 +107,7 @@ const teamMembers = [
         activePlayer: true,
         position: 'bystander',
         strengths: 'communicating',
-        weaknesses: 'helping',
+        weaknesses: 'fighting',
         skills: ['lets everyone know whats happening', 'communication'],
         biography: 'Narrarator is a really cool smurf',
         imageURL:"Narrator.webp"
@@ -171,7 +171,7 @@ function generateTeamCards() {
             case 'fighting':
                         strengthsColor = "orange"
                         break
-        },
+        }
 
         let weaknessesColor 
 
@@ -179,9 +179,31 @@ function generateTeamCards() {
             case 'fighting':
                 weaknessesColor = "red"
                 break
+            case 'sensitive':
+                    weaknessesColor = "orange"
+                    break
+            case 'thinking':
+                weaknessesColor = "blue"
+                break
+            case 'smart':
+                    weaknessesColor = "green"
+                    break
+            case 'Gargamel hates her specifically':
+                        weaknessesColor = "pink"
+                        break
+        case 'little patience':
+                            weaknessesColor = "red"
+                            break
         }
  
-        
+        let skillsColor
+        switch (member.weaknesses.toLowerCase()) {
+            skillsColor = "red"
+            break
+        }
+
+
+
 
 
 
@@ -226,6 +248,9 @@ function generateTeamCards() {
             <p style="color: ${positionColor};"><strong>Position</strong> ${member.position}</p>
             <p style="color: ${ageColor};"><strong>Age:</strong> ${member.age}</p>
             <p style="color: ${strengthsColor};"><strong>Strengths:</strong> ${member.strengths}</p>
+            <p style="color: ${weaknessesColor};"><strong>Weaknesses:</strong> ${member.weaknesses}</p>
+            <p style="color: ${skillsColor};"><strong>Weaknesses:</strong> ${member.skills}</p>
+
 
 
         </div>

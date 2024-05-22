@@ -171,18 +171,17 @@ function generateTeamCards() {
             case 'fighting':
                         strengthsColor = "orange"
                         break
-        }
+        },
 
-        let weaknessesColorColor
+        let weaknessesColor 
 
-        switch (member.weaknesses) {
+        switch (member.weaknesses.toLowerCase()) {
             case 'fighting':
-                weaknessesColorColor = "blue"
-                break,
-
-                //not working help 
-           
+                weaknessesColor = "red"
+                break
         }
+ 
+        
 
 
 
@@ -198,6 +197,8 @@ function generateTeamCards() {
                     break
             
         }
+
+
         
 
         // Declare ageColor variable before the switch statement

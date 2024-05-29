@@ -202,9 +202,9 @@ function generateTeamCards() {
 
 
 
-        let ageColor
+        let Background
 
-        switch (member.strengths.toLowerCase()) {
+        switch (member.age) {
             case 100:
                 ageColor = "green"
                 break
@@ -233,14 +233,13 @@ function generateTeamCards() {
 
         // Now ageColor will have a value based on the switch case, so you can safely use it
         card.innerHTML = `
-    <div class="card" style="background-color: ${getBackgroundColor(member.age)};">
+    <div class="card" style="background-color: ${(member.age)}">
     <img src="${member.imageURL}" class="image-fluid">
         <div class="card-header">
             ${member.name}
         </div>
             <p style="color: ${positionColor};"><strong>Position</strong> ${member.position}</p>
-            <p style="color: ${ageColor};"><strong>Age:</strong> ${member.age}</p>
-            <p style="color: ${strengthsColor};"><strong>Strengths:</strong> ${member.strengths}</p>
+            <div id="cardBody" class="card-body" style="background-color: ${ageColor};">            <p style="color: ${strengthsColor};"><strong>Strengths:</strong> ${member.strengths}</p>
             <p style="color: ${weaknessesColor};"><strong>Weaknesses:</strong> ${member.weaknesses}</p>
             <p><strong>Weaknesses:</strong> ${member.skills}</p>
 

@@ -44,7 +44,7 @@ const teamMembers = [
         weaknesses: 'Gargamel hates her specifically',
         skills: ['karate', 'stalling'],
         biography: 'Smurfette is a really smart smurf',
-        imageURL:"Smurfette.webp",
+        imageURL:"smurfette.webp",
     },
     {
         name: 'Brainy',
@@ -88,7 +88,7 @@ const teamMembers = [
         weaknesses: 'fighting',
         skills: ['being a leader', 'communication'],
         biography: 'Papa is a really cool smurf',
-        imageURL:"Papa.webp"
+        imageURL:"papasmurf.webp"
     },
     {
         name: 'Clumsy',
@@ -241,7 +241,8 @@ function generateTeamCards() {
             <p style="color: ${positionColor};"><strong>Position</strong> ${member.position}</p>
             <div id="cardBody" class="card-body" style="background-color: ${ageColor};">            <p style="color: ${strengthsColor};"><strong>Strengths:</strong> ${member.strengths}</p>
             <p style="color: ${weaknessesColor};"><strong>Weaknesses:</strong> ${member.weaknesses}</p>
-            <p><strong>Weaknesses:</strong> ${member.skills}</p>
+            <p><strong>Skills:</strong> ${member.skills}</p>
+            <p><strong>biography:</strong> ${member.biography}</p>
 
 
 
